@@ -1,0 +1,15 @@
+Algoritmo desafioHolaMundo
+	//Desarrollar un programa que muestre el mensaje "Hola, mundo!" por
+	//terminal, luego muestre el nombre y apellido del programador, y por último y
+	//finalice su ejecución.
+	
+	Definir nombre, apellido Como Caracter
+	Escribir "Hola Mundo!"
+	Escribir "Hola nuevo programador, ecribe tu nombre: "
+	Leer nombre
+	Escribir "Programador, ahora te pedimos tu apellido: "
+	Leer apellido
+	
+	nombreYApellido = nombre + " " +apellido
+	Escribir "Bienvenido al curso de inicio: ", nombreYApellido
+FinAlgoritmo
