@@ -1,0 +1,18 @@
+Algoritmo sin_titulo
+//Las variables "nota1", "nota2" y "nota3" contienen los valores
+//correspondientes a las notas numéricas, con valores entre 1 y 10, de un
+//alumno. Escribir un programa en PSeInt que calcule el promedio y muestre
+//una salida similar a la siguiente:
+	
+	Definir nota1, nota2, nota3 Como Entero
+	
+	Escribir "Por favor coloque su primera nota de su curso"
+	Leer nota1
+	Escribir "Por favor coloque su segunda nota de su curso"
+	Leer nota2
+	Escribir "Por favor coloque su tercera nota de su curso"
+	Leer nota3
+	
+	notaPromedio = (nota1+nota2+nota3)/3
+	Escribir "Su nota promedio, hasta ahora registrada es: ", notaPromedio	
+FinAlgoritmo
