@@ -1,0 +1,17 @@
+Algoritmo desafioHolaMundo
+	//Desarrollar un programa que al comenzar imprima por terminal el mensaje
+	//"¡Bienvenido! ¿Cuál es tu nombre? " y se quede esperando a que el usuario
+	//ingrese su nombre.
+	//Luego, el programa deberá imprimir por terminal el mensaje "¡Hola,
+	//<nombre>! Gusto en conocerte...", donde <nombre> debe ser el valor
+	//anteriormente ingresado por el usuario.
+	//Por ejemplo, si el usuario ingresa "Marcos", el mensaje final será "¡Hola,
+	//Marcos! Gusto en conocerte..."
+	
+	Definir nombre Como Caracter
+	Escribir "¡Bienvenido! ¿Cúal es tu nombre?"
+	Leer nombre
+	nombreUsuario  = "¡Hola "+ nombre + "! Gusto en conocerte..."     
+	Escribir nombreUsuario
+	
+FinAlgoritmo
