@@ -1,0 +1,11 @@
+Algoritmo sin_titulo
+//Desarrollar un programa que pida al usuario la medida de la base (b) y de la
+//altura (h) de un triángulo, calcule el valor de su área, y por último, que
+//muestre en la pantalla un mensaje con el valor calculado.
+	Escribir "Calcula el area del triangulo! Por favor ingrese la altura(h) y la base(b):"
+	Leer base
+	Leer altura
+	
+	area = (base * altura)/2
+	Escribir "El area del triangulo, según los valores ingresados es: ", area
+FinAlgoritmo
