@@ -1,0 +1,14 @@
+Algoritmo sin_titulo
+//Se tienen las variables "calle", "numero", "piso" y "departamento", que
+//contienen respectivamente el nombre de la calle, el número de la puerta, el
+//piso y el departamento correspondientes a una dirección postal.
+//Utilizar los conocimientos adquiridos para crear un programa en PSeInt que
+//muestre por la pantalla la dirección postal completa.
+
+	Definir calle, num, piso, departamento Como Caracter
+	calle = "Avenida Rivadavia"
+	num = "2430"
+	Piso = "1"
+	departamento = "30"
+	Escribir calle + " " + num + " "+ piso + " "+ departamento
+FinAlgoritmo
