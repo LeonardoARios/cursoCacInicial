@@ -1,0 +1,37 @@
+//Crea un programa que solicite la edad de una persona como entrada y
+//utilice condicionales anidados para categorizar la edad en grupos (niño,
+//adolescente, adulto, adulto mayor).
+//Elije tu mismo los rangos correspondientes para cada categoría
+
+
+	Algoritmo capitulo6Desafio3
+	Escribir "Ingrese su edad, por favor"; 
+	leer edad
+	
+	Si edad > 65 Entonces
+		Escribir "Usted es un adulto mayor"; 
+		
+	SiNo
+		Si edad <= 64  Entonces
+			Si edad > 21 Entonces
+				Escribir "Usted es un adulto"; 
+			SiNo
+				Si edad <= 20 Entonces
+					Si edad >= 13 Entonces
+						Escribir "Usted es un adolecente"; 
+					SiNo
+						Si edad >= 5 Entonces
+							Escribir "Usted es un niño"; 
+						SiNo
+							Escribir "Es un bebé"; 
+						Fin Si
+					Fin Si
+				SiNo
+					//
+				Fin Si
+			Fin Si
+		SiNo
+			//
+		Fin Si
+	Fin Si
+FinAlgoritmo
