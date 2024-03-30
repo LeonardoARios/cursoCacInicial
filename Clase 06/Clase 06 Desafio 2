@@ -1,0 +1,47 @@
+Algoritmo clase6Desafio2
+	
+//Escribe un programa que solicite al usuario ingresar la calificación
+//numérica de un estudiante. Utilizando condicionales anidados, asigna una
+//calificación (A, B, C, D, F) basada en el siguiente sistema predefinido:
+	
+//A: Calificaciones entre 90 y 100.
+//B: Calificaciones entre 80 y 89.
+//C: Calificaciones entre 70 y 79.
+//D: Calificaciones entre 60 y 69.
+//F: Calificaciones entre 0 y 59.
+//El programa debe evaluar la calificación numérica ingresada y asigana la calificación correspondiente. 
+	
+	
+	Escribir "Ingrese su calificación"; 
+	leer nota
+	
+	Si nota < 101 Entonces
+		Si nota >= 90 Entonces
+			Escribir "Se saco un A"; 
+		SiNo
+			Si nota <= 89 Entonces
+				Si nota > 80 Entonces
+					Escribir "Se saco un B";
+				SiNo
+					Si nota < 79 Entonces
+						Si nota >= 70 Entonces
+							Escribir "Se saco un C"; 
+						SiNo
+							Si nota < 69 Entonces
+								Si nota >= 60 Entonces
+									Escribir "Se saco un D"; 
+								SiNo
+									Si nota < 59 Entonces
+										Escribir "Se saco un F"; 
+									SiNo
+										Escribir "Usted desaprobó";
+									Fin Si
+								Fin Si
+							Fin Si
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
