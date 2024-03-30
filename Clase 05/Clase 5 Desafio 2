@@ -1,0 +1,45 @@
+Algoritmo clase5Desafio2
+	
+	//A un trabajador le pagan según sus horas trabajadas y la tarifa tiene
+	//un valor por hora. Si la cantidad de horas trabajadas es mayor a 40, la
+	//tarifa por hora se incrementa en un 50% para las horas extras.
+	//Calcular el salario del trabajador dadas las horas trabajadas y la
+	//tarifa.
+	//Escribe un programa usando PSeInt y estructuras condicionales que
+	//soliciten al operador el valor de la tarifa, la cantidad de horas trabajadas
+	//e imprima en la pantalla el salario a percibir..
+	
+	
+	Definir increm, valorRxtra, horasExtr, tarifa, horasTrab Como real
+	Escribir "Ingrese el valor de horas totales trabajadas"
+	leer horasTrab
+	Escribir "Ingrese la tarifa persivida por hora"
+	leer tarifa
+	
+	Si horasTrab < 40 Entonces
+		Escribir "Su salario no tiene horas extras  "; 
+	SiNo
+		Si horasTrab > 40 Entonces
+			Escribir "Su salario tiene horas extras ";
+		SiNo
+			//"Prueba"
+		Fin Si
+	Fin Si
+	
+	
+	valorCHor = 40 * tarifa
+	
+	horasExtr = horasTrab - 40
+	
+	valorRxtra = horasExtr * tarifa
+	
+	increm = valorRxtra / (1/0.5)
+	
+	salario = valorCHor + (increm + valorRxtra)
+	
+	
+	
+	Escribir "sus horas extras es:  ", horasExtr; 
+	Escribir  "su salario total es:  ", salario; 
+	
+FinAlgoritmo
