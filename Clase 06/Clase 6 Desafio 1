@@ -1,0 +1,44 @@
+Algoritmo clase6Desafio1
+	
+	//Escribe un programa que recibe tres longitudes como entrada y utiliza
+	//condicionales anidados para determinar el tipo de triángulo que se forma
+	//(equilátero, isósceles o escaleno).
+	//Recuerda:
+	//Triángulo Equilátero: Todos sus lados son de igual longitud.
+	//Triángulo Isósceles: Posee al menos dos lados de igual longitud.
+	//Triángulo Escaleno: Todos sus lados tienen longitudes diferentes
+	
+	Escribir "Ingrese la longitud de cada lado del tri la, lb y lc"; 
+	leer la
+	leer lb
+	leer lc
+	
+	Si la = lb Entonces
+		Si lb = lc Entonces
+			Escribir "Es un triangulo equilatero"; 
+		SiNo
+			Escribir "Es un triangulo isosceles"; 
+		Fin Si
+	SiNo
+		Si la > lb Entonces
+			Si lb > lc Entonces
+				Escribir "Es un triangulo escaleno"; 
+			SiNo
+				Escribir "Es un triangulo isosceles"; 
+			Fin Si
+		SiNo 
+			Si la < lb Entonces
+				Si lb < lc Entonces
+					Escribir "Es un triangulo escaleno"; 
+				SiNo
+					Escribir "Es un triangulo isosceles";  
+					
+				Fin Si
+				
+			Fin Si
+			
+		Fin Si
+		
+	Fin Si
+	
+FinAlgoritmo
