@@ -1,0 +1,26 @@
+Algoritmo clase7Desafio2
+//Escribe un programa que califique a un alumno a partir de su nota según las
+//condiciones siguiente:
+//0 a 3: "Debes estudiar más."
+//4 a 7: "En proceso de alcanzar los objetivos."
+//8 a 9: "Alcanza los objetivos."
+//10: "Supera los objetivos."
+//Otro valor: "Error en la nota ingresada."
+//Utiliza la estructura "Segun..."
+	
+	Escribir "Ingrese su calificación obtenida"; 
+	leer nota
+	
+	Segun nota Hacer
+		0, 1, 3:
+			Escribir "Debes estudiar más";
+		4, 5, 6, 7:
+			Escribir "En proceso de alcanzar los objetivos"; 
+		8, 9:
+			Escribir "Alcanza los objetivos"; 
+		10:
+			Escribir "Supera los objetivos";
+		De Otro Modo:
+			Escribir "Error en la nota ingresada"; 
+	Fin Segun
+FinAlgoritmo
