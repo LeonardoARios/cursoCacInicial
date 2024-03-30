@@ -1,0 +1,28 @@
+Algoritmo clase6Desafio1
+	//Crea un programa que solicite al usuario ingresar un número del 1 al 7 que
+	//represente un día de la semana.
+	//Utiliza la estructura "Segun..." para mostrar el nombre del día
+	//correspondiente (Lunes, Martes, ..., Domingo), o un mensaje de error si el
+	//número está fuera de ese rango.
+	Escribir "Ingrese un número del 1 al 7"; 
+	leer num
+	
+	Segun num Hacer
+		1:
+			escribir "Es el día Lunes"; 
+		2:
+			escribir "Es el día Martes";
+		3:
+			escribir "El el día Miercoles"; 
+		4:
+			escribir "Es el día Jueves"; 
+		5:
+			escribir "Es el día Viernes";
+		6:
+			escribir "Es el día Sabado";
+		7:
+			escribir "Es el día Domingo";
+		De Otro Modo:
+			escribir "Error esta fuera del rango";
+	Fin Segun
+FinAlgoritmo
