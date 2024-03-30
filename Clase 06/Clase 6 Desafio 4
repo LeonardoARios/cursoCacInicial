@@ -1,0 +1,56 @@
+Algoritmo clase6Desafios4
+//Escribe un programa en PSeInt que simule el juego de piedra, papel o
+//tijeras contra la computadora.
+//El programa debe solicitar al usuario que elija entre piedra (1), papel (2) o
+//tijeras (3). La computadora seleccionará aleatoriamente una de las
+//opciones.
+//Luego, se determinará el ganador según las reglas del juego: piedra vence
+//tijeras, tijeras vencen papel y papel vence piedra.
+//El programa debe mostrar el resultado del juego, indicando la elección del
+//usuario, la elección de la computadora y si el usuario ganó, perdió o
+//empató.
+	
+	Escribir "seleccione un numero que represente (1) Piedra, (2) Papel, (3) Tijera"; 
+	leer numJu
+	numCom = (azar(3) + 1)
+	
+	Si numJu = numCom Entonces
+		Escribir "Vuelva intentarlo"; 
+	SiNo 
+		Si numJu = 3 Entonces
+			Si numCom = 1 Entonces
+				Escribir "Gano la compu, eligió Piedra"; 
+			SiNo
+				Escribir "Gano usted!!!, eligió Papel"; 
+			Fin Si
+		SiNo
+			Si numJu = 2 Entonces
+				Si numCom = 1 Entonces
+					Escribir "Gano usted!!!, eligió Papel"; 
+				SiNo
+					Escribir "Gano la compu, eligió Tijera"; 
+				Fin Si
+			SiNo
+				Si numJu = 3 Entonces
+					Si numCom = 1 Entonces
+						Escribir "Gano la compu, eligió Tijera"; 
+					SiNo
+						Escribir "Gano la compu, eligió Papel"; 
+					Fin Si
+				SiNo
+					Si numJu = 1 Entonces
+						Si numCom = 3 Entonces
+							Escribir "Gano usted, eligió Piedra!!!"; 
+						SiNo
+							Escribir "Gano la compu, eligió Papel"; 
+						Fin Si
+					SiNo
+						//
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+Escribir "Tu seleccion es:  ", numJu
+Escribir "La compu eligió:  ", numCom; 
+FinAlgoritmo
