@@ -1,0 +1,23 @@
+Algoritmo clase5Desafio1
+	//Escribe un programa usando PSeInt y estructuras condicionales que
+	//resuelva la siguiente situación:
+	//Un usuario necesita retirar un monto x dinero de su cuenta bancaria.
+	//Teniendo en cuenta que tiene $10000 en su cuenta, solicitar al usuario
+	//el valor del monto a retirar, y a partir del saldo de su cuenta, informar
+	//si puede retirar o no el dinero que necesita.
+
+	Definir dinero Como Entero
+	Escribir "Indique el dinero a retirar de su cuenta";
+	leer dinero
+	
+	Si dinero < 10001 Entonces
+		Escribir "Puede retirar el monto:  "; 
+	SiNo
+		Escribir "Dinero no disponible:  "; 
+	Fin Si
+	si dinero <= 0 Entonces
+		Escribir "El valor no puede ser negativo:  "; 
+		
+	FinSi
+FinAlgoritmo
+
