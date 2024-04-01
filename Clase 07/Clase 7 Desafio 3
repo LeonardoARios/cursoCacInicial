@@ -1,0 +1,51 @@
+Algoritmo clase7Desafio3
+	//Escribe un programa que determine el salario del mes, teniendo en cuenta
+	//que el mismo consta de un importe fijo y de un importe extra que depende
+	//de la cantidad de horas extras realizadas. El empleado posee también una
+	//categoría, y el valor de la hora extra se paga según la sigu
+	
+	//Categoria 	Precio de hora extra
+	//1				$3000
+	//2				$3800
+	//3				$5000
+	//4				$7000
+	
+	//salarioMensual
+	//importefijo
+	//importeExtra
+	
+	
+	
+	Escribir "Ingrese el importe fijo"; 
+	leer importeFijo;  
+	Escribir "Ingrese las horas extras realizadas"; 
+	leer horasExtras; 
+	Escribir "Ingrese su categoria para determinar su salario mensual"; 
+	leer catego; 
+	Segun catego Hacer
+		1:
+			Escribir "Su hora extra valoradas en $3000"; 
+			salario = (horasExtras * 3000) + importeFijo;
+			Escribir "Su salario total es igual:  $", salario;
+			
+		2:
+			Escribir "Su hora extra valoradas en $3800"; 
+			salario = (horasExtras * 3800) + importeFijo;
+			Escribir "Su salario total es igual:  $", salario;
+			
+		3:
+			Escribir "Su hora extra valoradas en $5000"; 
+			salario = (horasExtras * 5000) + importeFijo;
+			Escribir "Su salario total es igual:  $", salario;
+			
+		4: 
+			Escribir "Su hora extra valoradas en $7000"; 
+			salario = (horasExtras * 7000) + importeFijo;
+			Escribir "Su salario total es igual:  $", salario;
+			
+		De Otro Modo:
+			Escribir "Valores no contemplados, comuniquese con contaduría"; 
+			
+	Fin Segun
+	
+FinAlgoritmo
