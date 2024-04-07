@@ -1,0 +1,21 @@
+Algoritmo clase8Desafio3
+	//Crea un programa que solicite al usuario ingresar dos números.
+	//Utiliza operadores lógicos para verificar si ambos números son positivos.
+	//Muestra un mensaje indicando si ambos números son positivos o si al menos
+	//uno de ellos no cumple con esta condición.
+	
+	Definir num1, num2 Como Real
+	Escribir "Ingrese dos números pero que sean positivos"; 
+	leer num1; 
+	leer num2;
+	
+	Si num1 > 0 Y num2 > 0  Entonces
+		Escribir "Los dos números son positivos"; 
+	SiNo
+		Si num1 > 0 O num2 > 0 Entonces
+			Escribir "Algunos de los dos números son positivos"; 
+		SiNo
+			Escribir "Los dos números son negativos"; 
+		Fin Si
+	Fin Si
+FinAlgoritmo
