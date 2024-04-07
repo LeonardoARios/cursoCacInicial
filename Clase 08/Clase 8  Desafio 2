@@ -1,0 +1,20 @@
+Algoritmo clase8Desafio2
+	//Desarrolla un programa que solicite al usuario ingresar un número.
+	//Utiliza operadores lógicos para verificar si el número es impar y está en el
+	//rango de 10 a 50 (inclusive).
+	//Muestra un mensaje indicando si el número cumple con lo solicitado o no.
+	
+	//Planteo:
+	
+	//num
+	
+	Escribir "ingrese un número impar entre 10 y 50 inclusive"; 
+	leer num
+	
+	si (num >= 10  Y num <= 50 ) Y (num % 2 <> 0 )  Entonces
+		Escribir "El número es impar y estra entre los valores"; 
+	SiNo
+		Escribir "El número es par o no está entre los valores"; 
+	FinSi
+	
+FinAlgoritmo
