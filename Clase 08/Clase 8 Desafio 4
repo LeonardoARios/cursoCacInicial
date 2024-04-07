@@ -1,0 +1,42 @@
+Algoritmo clase8Desafio4
+	//Diseña un programa para una tienda que ofrezca descuentos a los clientes.
+	//Solicita al usuario ingresar el total de la compra y si es miembro del
+	//programa de lealtad ("sí" o "no").
+	//Aplica un descuento del 10% si la compra es mayor a $100 y el cliente es
+	//miembro del programa de lealtad.
+	//Si la compra es mayor a $200, aplica un descuento adicional del 5%.
+	//Muestra el total final con los descuentos aplicados.
+	
+	//Plateo variables: 
+	
+	//  compra
+	//  miembro
+	//  descu1
+	//  descu2
+	//  totalCom
+	
+	Definir compra, totalCom Como real
+	Definir miembro Como Caracter
+	
+	Escribir "Ingrese el valor de su compra $";
+	leer compra
+	Escribir "Es miembro de compradores leales si o no?"; 
+	leer miembro
+	miembro = Minusculas(miembro)
+	
+	Si miembro = "si" Y compra > 100  Entonces
+		descu1 = (compra * 10 / 100)
+		totalCom = compra - descu1
+		Escribir"Su compra compra por ser Leal!! es  $", totalCom
+	SiNo
+		Si miembro = "si" Y compra > 200  Entonces
+			descu2 = (compra * 15 /100)
+			totalCom = compra - descu2
+			Escribir"Su compra por ser Leal!! es  $", totalCom
+		SiNo
+			Si miembro = "si" O miembro = "no" Entonces
+				Escribir "Su compra es  $", compra
+		Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
