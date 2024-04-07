@@ -1,0 +1,25 @@
+Algoritmo clase8Desafio1
+	//Escribe un programa que solicite al usuario ingresar un nombre de usuario y
+	//una contraseña.
+	//Utiliza operadores lógicos para verificar que el nombre de usuario sea
+	//"admin" y la contraseña sea "secreta". Si ambos son correctos, muestra un
+	//mensaje de autenticación exitosa; de lo contrario, indica que la autenticación
+	//ha fallado.
+	
+	//Planteo:
+	
+	//nombUsu
+	//contra
+	
+	Escribir "Ingrese su nombre de usuario"; 
+	leer nombUsu;
+	Escribir "Ingrese su contraseña"; 
+	leer contra; 
+
+	Si nombUsu == "admin" Y contra == "secreta" Entonces
+		Escribir "autenticación exitosa"; 
+	SiNo
+		Escribir "autenticación ha fallado"; 
+	Fin Si
+	
+FinAlgoritmo
