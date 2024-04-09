@@ -1,0 +1,38 @@
+Algoritmo clase8Desafio5
+	
+//Diseña un programa que solicite al usuario ingresar su peso (en kilogramos) y
+//su altura (en metros). Calcula el Índice de Masa Corporal (IMC) utilizando la
+//fórmula
+//Luego, clasifica la condición física del usuario utilizando operadores lógicos:
+	
+//IMC menor que 18.5: Bajo peso.
+//IMC mayor que 18.5 y menor que 25: Peso normal.
+//IMC mayor que 25 y menor 30: Sobrepeso.
+//IMC mayor o igual que 30: Obesidad.
+	//Muestra el IMC calculado y la clasificación de la condición física del usuario.
+	
+	Definir pesoKg,  altura, imc Como Real
+	Escribir"; Ingrese su peso en (kg)"; 
+	leer pesoKg
+	Escribir "ingrese su altura en (m)"; 
+	leer altura
+	
+	imc = pesoKg /(altura^2)
+	
+	Escribir "El valor del IMC = ", imc,"Kg/m";
+	
+	Si imc < 18.5 Entonces
+		Escribir "Bajo de peso."; 
+	SiNo
+		Si imc < 18.5 Y imc < 25 Entonces
+			Escribir "Peso normal"; 
+		SiNo
+			Si imc < 25 Y imc < 30 Entonces
+				Escribir "Sobrepeso"; 
+			SiNo
+				Escribir "Obesidad"; 
+			Fin Si
+		Fin Si
+	Fin Si
+	
+FinAlgoritmo
