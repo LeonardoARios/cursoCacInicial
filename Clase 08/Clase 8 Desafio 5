@@ -9,7 +9,7 @@ Algoritmo clase8Desafio5
 //IMC mayor que 18.5 y menor que 25: Peso normal.
 //IMC mayor que 25 y menor 30: Sobrepeso.
 //IMC mayor o igual que 30: Obesidad.
-	//Muestra el IMC calculado y la clasificación de la condición física del usuario.
+//Muestra el IMC calculado y la clasificación de la condición física del usuario.
 	
 	Definir pesoKg,  altura, imc Como Real
 	Escribir"; Ingrese su peso en (kg)"; 
@@ -24,10 +24,10 @@ Algoritmo clase8Desafio5
 	Si imc < 18.5 Entonces
 		Escribir "Bajo de peso."; 
 	SiNo
-		Si imc < 18.5 Y imc < 25 Entonces
+		Si imc > 18.5 Y imc < 25 Entonces
 			Escribir "Peso normal"; 
 		SiNo
-			Si imc < 25 Y imc < 30 Entonces
+			Si imc > 25 Y imc < 30 Entonces
 				Escribir "Sobrepeso"; 
 			SiNo
 				Escribir "Obesidad"; 
