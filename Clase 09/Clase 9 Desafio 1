@@ -5,6 +5,7 @@ Algoritmo clase9Desafio1
 	//Si se ingresa la palabra "fin" terminar el programa.
 	
 	fruta = ""
+	cFrutas = 0 
 	fruta = Minusculas(fruta)
 	
 	Mientras fruta <> "fin" Hacer
@@ -13,6 +14,7 @@ Algoritmo clase9Desafio1
 		leer fruta
 		si fruta = "manzana" O fruta = "pera" O fruta = "pomelo" O fruta = "naranja" Entonces
 			Escribir "Usted eligió la fruta de la lista inicada"; 
+			cFrutas = cFrutas + 1 
 		SiNo
 			Escribir "No es la fruta indicada, elija otra o sino escriba fin"; 
 		FinSi
