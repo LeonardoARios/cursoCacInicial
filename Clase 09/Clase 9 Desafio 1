@@ -1,0 +1,26 @@
+Algoritmo clase9Desafio1
+	//Escribir un programa que pida al usuario nombre de frutas. Aceptar
+	//únicamente los valores "manzana", "pera", "pomelo" o "naranja".
+	//Si se ingresa otro valor, indicar el error y solicitar un nuevo valor.
+	//Si se ingresa la palabra "fin" terminar el programa.
+	
+	fruta = ""
+	fruta = Minusculas(fruta)
+	
+	Mientras fruta <> "fin" Hacer
+		
+		Escribir "Ingrese la fruta que desea entre manzana, pera, pomelo o naranja";
+		leer fruta
+		si fruta = "manzana" O fruta = "pera" O fruta = "pomelo" O fruta = "naranja" Entonces
+			Escribir "Usted eligió la fruta de la lista inicada"; 
+		SiNo
+			Escribir "No es la fruta indicada, elija otra o sino escriba fin"; 
+		FinSi
+		
+		Escribir "Quiere seguir eligiendo? si ó fin = (no)"; 
+		leer fruta
+		
+	Fin Mientras
+FinAlgoritmo
+
+
