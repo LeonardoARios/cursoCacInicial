@@ -1,0 +1,29 @@
+Algoritmo clase9Desafio2 
+	//Escribir un programa que pida al usuario números positivos hasta que el
+	//valor ingresado sea igual a cero.
+	//Mostrar en la pantalla el valor más pequeño de todos los que se ingresaron
+	//(sin considerar el cero que se ingresó para finalizar el bucle).
+	
+	num = 0
+	numMenor = 0
+	stopA = 1
+	
+	Mientras stopA <> 0 Hacer
+		Escribir "Ingrese el número positivo"; 
+		leer num
+		
+		Si num > 0 Entonces
+			Escribir "El número ingresado es positivo"; 
+			numMenor = num //guardo en el recipiente si el "numMenor" sigue siendo menor a "num". 
+			si numMenor < num Entonces
+				numMenor = num
+			FinSi
+		SiNo
+			Escribir "El número ingresado es negativo, tiene que ser Positivo"; 
+		Fin Si
+		Escribir "Desea seguir agregando números? 0 para (FINALIZAR)"; 
+		leer stopA
+	Fin Mientras
+	
+	Escribir "El número menor ingresado es:  ", numMenor
+FinAlgoritmo
