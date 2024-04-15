@@ -1,0 +1,23 @@
+Algoritmo clase11Desafio3
+//Desafío 3: Tabla de Multiplicar Personalizada
+//Crea un programa que solicite al usuario ingresar un número base y otro
+//número límite.
+//Utiliza un bucle "Mientras...Hacer" para mostrar la tabla de multiplicar de la
+//base hasta el límite ingresado.
+	
+	numBase = 0
+	numLimi = 1
+	Escribir "ingrese un número base"; 
+	leer numBase
+	Escribir "ingrese un número limite y multiplo";  
+	leer numLimi
+	
+	
+	Mientras numLimi > 0 Hacer
+		Escribir "El número base  ", numBase, " X ", numLimi, " = ", numBase*numLimi
+		numLimi = numLimi - 1
+		
+	Fin Mientras
+	
+	
+FinAlgoritmo
