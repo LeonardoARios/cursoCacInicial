@@ -6,7 +6,7 @@ Algoritmo clase9Desafio2
 	
 	num = 0
 	numMenor = 0
-	stopA = 1
+	stopA = 1 //Modoficar esta variablenen la linea 9 
 	
 	Mientras stopA <> 0 Hacer
 		Escribir "Ingrese el número positivo"; 
