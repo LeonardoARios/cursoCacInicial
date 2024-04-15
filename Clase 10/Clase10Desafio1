@@ -1,0 +1,123 @@
+Algoritmo clase10Desafio1
+	
+//Desafío 1: Piedra, papel o tijera (versión 2)
+//Con lo aprendido hasta ahora podemos implementar una versión mejorada
+//del programa que escribimos para jugar a "piedra, papel o tijera".
+//La nueva versión debe correr hasta que el usuario decida que no quiere
+//continuar jugando (ingresando "s" o "n"). Además, debe contar cuantas
+//partidas gano el usuario y cuantas la computadora.
+//Como desafío adicional, piensa en qué modificaciones debes hacer si deseas
+//que se realice un campeonato que conste sólo de 5 partidas.
+//¿Podrías implementar cambios para que el número de partidas sea
+//previamente ingresado por el usuario?
+	
+	
+	Definir respuesta Como Caracter
+	
+	respuesta = ""
+	contUsuar = 0
+	contCompu = 0
+	contJuego = 6
+	
+	Escribir "Quieres jugar una partida de piedra, papel o tijera?" 
+	Escribir "Elige s(si) o n(no)"; 
+	leer respuesta
+	Escribir "Quiere elegir la cantidad e Juegos de un máximo de 10?"
+	leer seleJuego
+	
+	contJuego = seleJuego
+	
+	
+	Mientras respuesta == "s" Y contJuego < 10 Y contJuego <> 0 Hacer
+		
+		
+		Si respuesta = "s" Y contJuego > 0  Entonces
+			Escribir "Elige entre las tres opciones (1)Piedra, (2)Papel o (3)Tijera"
+			leer seleccion
+			si seleccion = 1 Entonces
+				Escribir "Tu selección es Piedra"; 
+			FinSi
+			si seleccion = 2 Entonces
+				Escribir "Tu selección es Papel"; 
+			FinSi
+			si seleccion = 3 Entonces
+				Escribir "Tu selección es Tijera"; 
+			FinSi
+			
+			compu = azar(3) + 1
+			si compu = 1 Entonces
+				Escribir "La compu eligió Piedra"; 
+			FinSi
+			si compu = 2 Entonces
+				Escribir "La compu eligió Papel"; 
+			FinSi
+			si compu = 3 Entonces
+				Escribir "La compu eligió Tijera"; 
+			FinSi
+			
+			
+			
+			Segun seleccion Hacer
+				1:
+					Segun compu Hacer
+						2:
+							Escribir "Que mal!, perdió con Papel";
+							contCompu = contCompu + 1
+						3:
+							Escribir "Que bien! ganó con Piedra"; 
+							contUsuar = contUsuar + 1
+						1:
+							Escribir "Empardó con la selección, vuelva intentar"; 
+					Fin Segun
+				2:
+					Segun compu Hacer
+						3:
+							Escribir "Que mal!, perdió con Tijera";
+							contCompu = contCompu + 1
+						1:
+							Escribir "Que bien! ganó con Papel"; 
+							contUsuar = contUsuar + 1
+						2:
+							Escribir "Empardó con la selección, vuelva intentar"; 
+					Fin Segun
+				3:
+					Segun compu Hacer
+						1:
+							Escribir "Que mal!, perdió con Piedra";
+							contCompu = contCompu + 1
+						2:
+							Escribir "Que bien! ganó con Papel"; 
+							contUsuar = contUsuar + 1
+						3:
+							Escribir "Empardó con la selección, vuelva intentar"; 
+					Fin Segun
+					
+				De Otro Modo:
+					Escribir "seleccion erronea"; 
+					
+			Fin Segun
+			
+		Fin Si
+		contJuego = contJuego - 1
+		Escribir "Tienes solo:  ", contJuego, " Oportunidades para Ganar!!"
+		
+		Escribir "Quiere continuar?"; 
+		Leer respuesta
+		
+		SI respuesta = n Entonces
+			Escribir "Ok, nos vemos pronto"; 
+		FinSi
+		
+		Si contJuego == 0 Entonces
+			Escribir "Lastima, se acabó la oportunidad de Juego"; 
+		FinSi
+		
+	Fin Mientras
+	
+	Escribir "La compu ganó unos  ", contCompu " JUEGOS", " Tu ganaste:  ", contUsuar," JUEGOS" 
+	
+	si respuesta = "n" Entonces
+		Escribir "Ok, Nos vemos después"; 
+	FinSi
+	
+FinAlgoritmo
