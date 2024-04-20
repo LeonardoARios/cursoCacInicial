@@ -1,0 +1,40 @@
+Desafío 1: Datos Personales en formato de tarjeta
+Escribe un programa que solicite al usuario ingresar su nombre, apellido, año
+de nacimiento y ciudad de residencia. Utiliza f-strings y funciones de cadena
+para dar formato a la salida. La tarjeta debe incluir los siguientes datos:
+
+Apellido en mayúsculas y nombre: formato "APELLIDO, Nombre".
+Año de nacimiento.
+Correo electrónico: primera letra del nombre en minúsculas, seguido
+del apellido en minúsculas, un punto y el año de nacimiento, seguido de
+"@empresa.com.ar".
+Ciudad de residencia en mayúsculas.
+Edad aproximada: diferencia entre año actual y año de nacimiento.
+La tarjeta debe incluir un marco superior e inferior de líneas para mejorar la
+presentación.
+
+nomb = input("Ingrese su nombre  ")
+apell = input("Ingrese su apellido  ")
+edad = input("Ingrese su edad  ")
+naci = input("Ingrese su año de nacimiento ")
+ciud = input("Ingrese su ciudad de residencia  ")
+#Importo librería "datetime" con import
+import datetime
+añoActual = datetime.datetime.now().year
+diferenciaAño = añoActual - int(naci)#convertí el str a int porque la diferencia no me lo tomaba. 
+
+#Solo quería ver que tipo de dato tomaba python cuando lo ingresaba el usuario. 
+print(type(nomb)) 
+print(type(apell))
+print(type(naci))
+print(type(ciud))
+
+tarjeta = ("Datos Personales") #elementoDelMarco
+print(tarjeta.upper().center(90, "-")) #elementoDelMarco
+print("|Apellido:  ", apell.upper(), nomb.capitalize())
+print("|Año".capitalize(), naci)
+print("|Correo electrónico: " + nomb.lower() + apell.lower() + "." + naci + "@empresa.com.ar")#no supe como sacar el acento
+print("|Ciudad:  ", ciud.upper())
+print(f"|Año:  {diferenciaAño}")
+marco = ("-")#elementoDelMarco
+print(marco.center(90, "-"))#elementoDelMarco
