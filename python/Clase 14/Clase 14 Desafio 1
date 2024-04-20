@@ -33,7 +33,7 @@ tarjeta = ("Datos Personales") #elementoDelMarco
 print(tarjeta.upper().center(90, "-")) #elementoDelMarco
 print("|Apellido:  ", apell.upper(), nomb.capitalize())
 print("|Año".capitalize(), naci)
-print("|Correo electrónico: " + nomb.lower() + apell.lower() + "." + naci + "@empresa.com.ar")#no supe como sacar el acento
+print(f"|Correo electrónico:  {nomb.lower()}{apell.lower()}.{naci}@empresa.com.ar") #no supe como sacar el acento
 print("|Ciudad:  ", ciud.upper())
 print(f"|Año:  {diferenciaAño}")
 marco = ("-")#elementoDelMarco
