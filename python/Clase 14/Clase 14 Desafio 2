@@ -1,0 +1,59 @@
+#Desafío 2: Generar factura con descuento e interés
+#Escribe un programa que simule la generación de una factura para un cliente. Debe incluir: razón
+#social, domicilio, detalles de la compra (cantidad, descripción, precio unitario y subtotal). La factura
+#será por la compra de un artículo. Formatea estos datos en una tabla utilizando \t. Incluir además:
+#IVA del Subtotal: Calcula el 21% de IVA sobre el subtotal de la compra y añádelo a la factura.
+#Descuento: Solicita al usuario que ingrese un valor en $ para aplicar como descuento sobre el
+#precio total con IVA. El descuento debe mostrarse en la factura.
+#Total con IVA y Descuento: Calcula el total a pagar restando el descuento del precio total con
+#IVA.
+#Forma de Pago: Muestra al usuario cuál sería el valor con dos opciones de pago:
+#CONTADO: Precio total sin cambios.
+#CUOTAS: Ofrece la opción de pago en 3 cuotas con un 15% de interés o en 6 cuotas con
+#un 25% de interés. Calcula el nuevo precio total con el interés correspondiente y muestra
+#esta información en la factura.
+
+
+import os
+#Datos de comprador
+razonSo = input("Ingrese su razón social:  ");
+domEmpr = input("Ingrese su domicilio:  ");
+
+
+#Detalle de la compra
+descArt = input("Detalle de los articulos comprados:  ");
+cantArt = int(input("Ingrese la cantdida de articulos: "));
+presArt = float(input("Ingrese el precio del articulo: "));
+descFac = float(input("Tiene algún descuento en $(pesos)?: "));
+
+
+#Subtotales de la compra
+toSinIva = (presArt * cantArt);
+toConIva = (toSinIva * 0.21)+ toSinIva;
+deConIva = (toConIva - descFac);
+cuotTres = (deConIva*0.15/3)
+toInTres = cuotTres + (deConIva/3)
+cuotaSei = (deConIva*0.25/6)
+toInSeis = cuotaSei + (deConIva/6)
+os.system("cls")
+
+#Formato de la factura (Encabezado)
+print(f'Razón social:\t\t{razonSo.upper()}\nDomicilio:\t\t{domEmpr.upper()}');
+print()
+#Formato cuerpo de factura 
+print(f'Cantidad\t\t\tDescripción\t\t\tValor');
+print(f'{cantArt}\t\t\t\t{descArt.capitalize()}\t\t\t\t{presArt:.2f}');
+print()
+
+#Formato Precio de factura
+print(f'Subtotal:\t\t${toSinIva}')
+print(f'Totalc/IVA 21%:\t\t${toConIva}')
+print(f'Descuento:\t\t-${descFac}')
+print(f'TOTAL:\t\t\t${deConIva}')
+
+#Formato Forma de pago
+print()
+print(f'FORMA DE PAGOS:');
+print(f'TOTAL AL CONTADO:\t\t\t\t${deConIva}');
+print(f'EN CUOTAS DE 3 PAGOS 15% (INTERES) De :${cuotTres:.2f} TOTAL: ${(toInTres)*3:.2f}')
+print(f'EN CUOTAS DE 6 PAGOS 25% (INTERES) De :${cuotaSei:.2f} TOTAL: ${(toInSeis)*6:.2f}')
