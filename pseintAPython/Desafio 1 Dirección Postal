@@ -1,0 +1,27 @@
+#Algoritmo: Dirección Postal
+#Se tienen las variables "calle", "numero", "piso" y "departamento", que
+#contienen respectivamente el nombre de la calle, el número de la puerta, el
+#piso y el departamento correspondientes a una dirección postal.
+#Utilizar los conocimientos adquiridos para crear un programa en PSeInt que
+#muestre por la pantalla la dirección postal completa.
+
+#SE MODIFICA LOS DATOS PARA QUE SEAN LOS QUE INGRESAN EL USUARIO.
+
+#Se solicita al usuario el ingreso de los datos. 
+calle = input("Ingrese su nombre de calle:  ");
+num = input("ingrese su número de calle:  ");
+piso = input("Ingrese su número de piso:  ");
+depar = input("Ingrese el departamento al que habita:  ");
+
+#Se reordena los datos ingresados y se muestra en pantalla. 
+print("Dirección".upper().center(60,"*")); #Se crea marco superior
+print(f'nombre de calle:  {calle}\nnúmero de la misma:  {num}\nnúmero de piso:  {piso}\nnúmero de departamento:  {depar}');
+print("Dirección".upper().center(60,"*")); #Se crea marco inferior
+
+#Terminal
+'''*************************DIRECCIÓN**************************
+nombre de calle:  Avenida Rivadavia
+número de la misma:  2530
+número de piso:  1
+número de departamento:  18
+*************************DIRECCIÓN**************************'''
