@@ -1,0 +1,25 @@
+#Las variables “nota1”, “nota2” y “nota3” contienen los valores
+#correspondientes a las notas numéricas, con valores entre 1 y 10, de un
+#alumno. Escribir un programa en PSeInt que calcule el promedio y muestre
+#una salida similar a la siguiente:
+
+#Solicito los datos al usuario. 
+nota1 = int(input("Ingrese su primera nota:  "));
+nota2 = int(input("Ingrese su segunda nota:  "));
+nota3 = int(input("Ingrese su tercer nota:  "));
+
+#muestro el promedio de nota: 
+print("nota promedio".upper().center(90, "*"))
+print(f'Nota 1°: {nota1}\nNota 2°: {nota2}\nNota 3°: {nota3}');
+print(f'El promedio de su nota es: {(nota1+nota2+nota3)/3:.2f}');
+print("*".center(90,"*")); 
+
+#Terminal: 
+'''
+**************************************NOTA PROMEDIO***************************************
+Nota 1°: 6
+Nota 2°: 7
+Nota 3°: 8
+El promedio de su nota es: 7.00
+******************************************************************************************
+'''
