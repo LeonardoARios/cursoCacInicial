@@ -1,0 +1,40 @@
+'''Desafío 1: Descuentos en tienda de ropa
+Escribe un programa en Python que solicite al usuario el monto total de la
+compra y la cantidad de artículos que está comprando. El programa debe
+determinar el descuento aplicable según las siguientes reglas:
+
+Si la cantidad de artículos comprados es mayor o igual a 5 y el monto
+total es mayor a $10000, aplica un descuento del 15%.
+Si la cantidad de artículos comprados es menor a 5 pero mayor o igual a
+3, aplica un descuento del 10%.
+Si la cantidad de artículos comprados es menor a 3, no se aplica
+descuento.
+Al final, el programa debe imprimir el monto total de la compra después de
+aplicar cualquier descuento o simplemente el monto original si no hay
+descuento.'''
+
+monTo = float(input("Ingrese el monto total de su compra:  $"))
+canTo = int(input("Ingrese al cantidad total de articulos:  $"))
+print("tendras descuento?".upper().center(90,"-"))
+if canTo >= 5 and monTo > 10000:
+    print(f'Bien! Recibes un descuento de\n15% en tu compra ${monTo}')
+    desCu = (monTo * 0.15)#Saco el valor del descuento
+    paTotal = monTo - desCu
+    print(f'El total con el descuento es: ${paTotal:.2f}')
+elif canTo < 5 and canTo >= 3:
+    print(f'Bien! Recibes un descuento del\n10% en tu compra ${monTo}')
+    desCu = (monTo * 0.10)
+    paTotal = monTo - desCu
+    print(f'El total con el descuento es: ${paTotal:.2f}')
+else : 
+    print(f'No se aplica ningún descuento\nEl Monto total es ${monTo:.2f}')
+print("gracias por su compra, vuelva cuando tenga dinero".upper().center(90,"-"))
+
+#Terminal:
+'''
+------------------------------------TENDRAS DESCUENTO?------------------------------------
+Bien! Recibes un descuento de
+15% en tu compra $15000.0
+El total con el descuento es: $12750.00
+--------------------GRACIAS POR SU COMPRA, VUELVA CUANDO TENGA DINERO---------------------
+'''
