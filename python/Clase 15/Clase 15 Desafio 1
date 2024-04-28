@@ -1,0 +1,22 @@
+#Desafío 1: Comparación de cadenas
+#Escribe un programa que solicite al usuario dos cadenas de caracteres. Por
+#ejemplo: dos nombres.
+#El programa debe ser capaz de comparar ambas cadenas y mostrar el
+#mensaje “Son iguales” si ambas cadenas lo son, o mostrar el mensaje “No son
+#iguales” si no lo son. Ejemplo:
+
+nomb1 = input("Ingrese el primer nombre:  ")
+nomb2 = input("Ingrese el segundo nombre:  ")
+
+#Condicional if 
+if nomb1 == nomb2:
+    print("Los nombres son iguales")
+else : 
+    print("Los nombres no son iguales")
+
+#Terminal
+'''
+Ingrese el primer nombre:  Leonardo
+Ingrese el segundo nombre:  leonardo
+Los nombres no son iguales
+'''
