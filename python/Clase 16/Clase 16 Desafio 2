@@ -1,0 +1,32 @@
+#Desafío 2: Categorización de productos según su tipo
+#Escribe un programa en Python que solicite al usuario ingresar el código de
+#un producto y determine a qué categoría pertenece según las siguientes
+#reglas:
+#Si el código comienza con "A", el producto es de tipo "Electrónico".
+#Si el código comienza con "B", el producto es de tipo "Ropa".
+#Si el código comienza con "C", el producto es de tipo "Alimenticio".
+#Si el código no coincide con ninguna de las anteriores, el programa debe
+#mostrar un mensaje indicando que el tipo de producto es
+#"Desconocido".
+#Importante: No utilizar condicionales anidados para resolver este ejercicio
+print("tipo de producto".upper().center(90,"-"))
+tipoPro = input("Cual es el tipo de producto que desea averiguar?:  ".upper())
+tipoPro = tipoPro.upper()#para uppear la cadena de caracteres. 
+match tipoPro[0]:#así selecciono de la totalidad de la cadena de caracteres que ingresa el usuario me tome el primero. 
+    case "A":
+        print("El tipo de producto que se identifica es 'Electrónico'")
+    case "B":
+        print("El tipo de producto que se identifica es 'Ropa'")
+    case "C":
+        print("El tipo de producto que se identifica es 'Alimenticio'")
+    case _:
+        print("El tipo de producto es 'Desconocido'")
+print("---".upper().center(90,"-"))
+
+#Termianl
+'''
+-------------------------------------TIPO DE PRODUCTO-------------------------------------
+CUAL ES EL TIPO DE PRODUCTO QUE DESEA AVERIGUAR?:  b546444
+El tipo de producto que se identifica es 'Ropa'
+------------------------------------------------------------------------------------------
+'''
