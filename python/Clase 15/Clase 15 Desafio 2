@@ -1,0 +1,21 @@
+#Desafío 2: Tope máximo de extracción
+#Escribe un programa para un cajero automático de un banco que permita
+#ingresar un importe y determine si la extracción puede hacerse o el usuario
+#debe realizarla por la caja. El tope máximo es de $ 20000. Ejemplo:
+
+print("bienvendido al cajero automatico".upper().center(90,"*"))
+caja = float(input("Ingrese el importe que quiere retirar:  "))
+if caja > 0 and caja <= 20000:
+    print(f'Puede retirar su valor {caja}\nGracias vuelva pronto'.upper())
+else : 
+    print("Valor no valido o fuera de limite crediticio")
+print("---".center(90, "-"))
+
+#Terminal
+'''
+****************************BIENVENDIDO AL CAJERO AUTOMATICO*****************************
+Ingrese el importe que quiere retirar:  15000
+PUEDE RETIRAR SU VALOR 15000.0
+GRACIAS VUELVA PRONTO
+------------------------------------------------------------------------------------------
+'''
