@@ -1,0 +1,24 @@
+#Desafío 2: Generador de Patrones
+#Crear una función que imprima un patrón simple en la consola (como una
+#pirámide). La función simplemente imprimirá el patrón cada vez que se
+#llame.
+
+def patron():
+    print(f'\t     *')
+    print(f'\t    ***')
+    print(f'\t   *****')
+    print(f'\t  *******')
+    print(f'\t *********')
+    print(f'\t***********')
+patron()
+
+#Terminal:
+
+'''
+             *
+            ***
+           *****
+          *******
+         *********
+        ***********
+'''
