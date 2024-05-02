@@ -1,0 +1,43 @@
+#Desafío 1: Saludos Personalizados
+#Crear una función que imprima un saludo personalizado. La función no debe
+#recibir ningún valor y siempre imprimirá el mismo mensaje, por ejemplo,
+#"¡Hola, bienvenidos al curso de Python!".
+#!No olvides escribir en el programa una llamada a la función que creaste!
+
+def saludoBien():
+    if nombre.lower() == "leo":
+        print(f'Como estas {nombre}!!')
+    else :
+        print("Tu no eres el dueño del sistema")
+
+def chistes():
+    import random
+    chiste1 = "¿Por qué los programadores prefieren el café helado?\nPorque les gusta el Java bien frío."
+    chiste2 = "¿Por qué los programadores odian el mar?\nPorque siempre les devuelve NULL."
+    respuesta = input("Te cuento un chiste?(SI/NO)").lower()
+    if respuesta == "si":
+        chisteAleatorio = random.choice([chiste1,chiste2])
+        print(chisteAleatorio)
+    else:
+        print("No estas de humor para un chiste, ok")
+
+#Comienzo de la base
+
+marco =""
+print(f'Bienvenido al Sitema.{marco}'.upper().center(90,"*"))
+
+nombre = input("Cual es tu nombre? ").lower()
+if nombre =="leo":
+    saludoBien()
+    chistes()
+else:
+    print("Tu no eres el dueño del sistema")
+
+print(f'hasta luego {marco}'.upper().center(90,"+"))
+
+#Termianl:
+
+'''
+**********************************BIENVENIDO AL SITEMA.***********************************
+Cual es tu nombre? 
+'''
