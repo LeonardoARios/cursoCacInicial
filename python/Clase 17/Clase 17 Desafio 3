@@ -1,0 +1,28 @@
+#Desafío 3: Impresión de Tabla de Multiplicar
+#Desarrollar una función que imprima la tabla de multiplicar de un número
+#fijo (por ejemplo, la tabla del 3). Cada vez que se llame a la función, imprimirá
+#la tabla completa de ese número (3 x 1 = 3, 3 x 2 = 6, ..., 3 x 10 = 30).
+#La salida podría ser algo así:
+
+def tabla3():
+    print(f'3 x 1 = 3,\n3 x 2 = 6,\n3 x 3 = 9,\n3 x 4 = 12,\n3 x 5 = 15,\n3 x 6 = 18,\n3 x 7 = 21,\n3 x 8 = 24,\n3 x 9 = 27,\n3 x 10 = 30')
+
+print("Esta es la Tabla del 3".upper().center(90,"+"))
+tabla3()
+print("Este es el fin del programa".upper().center(90,"x"))
+
+#Termial: 
+'''
+++++++++++++++++++++++++++++++++++ESTA ES LA TABLA DEL 3++++++++++++++++++++++++++++++++++
+3 x 1 = 3,
+3 x 2 = 6,
+3 x 3 = 9,
+3 x 4 = 12,
+3 x 5 = 15,
+3 x 6 = 18,
+3 x 7 = 21,
+3 x 8 = 24,
+3 x 9 = 27,
+3 x 10 = 30
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxESTE ES EL FIN DEL PROGRAMAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+'''
