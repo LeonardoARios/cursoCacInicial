@@ -1,0 +1,50 @@
+#Desafío 3: Generador de ticket para cine
+#Desarrollar dos funciones: la primera imprimirá los datos de la película (nombre,
+#día y hora, sala), solicitados por teclado. La segunda función obtendrá el valor
+#del ticket, recibiendo como parámetros la cantidad de entradas, el valor de la
+#entrada y un descuento en % sobre el total si la cantidad de entradas es mayor
+#o igual a 5. El formato de salida podrá ser similar a este:
+
+def datoPeli():
+    peli = input(f'Ingrese la pélicula que desea ver:  ')
+    date = input(f'Ingrese el día:  ')
+    hour = input(f'Ingrese hora:  ')
+    print("Ticket".center(40,"*").upper())
+    print(f'Pelicula: {peli}\nDía: {date} hora: {hour}\nSala: 3'.upper())
+
+def costo(c,v):
+    if c >= 5:
+        res = c * v
+        des = res * 0.20 #no me dice la cantidad del descuento
+        tot = res - des
+        print(f'Valor de la entrada: ${v}\nCantidad de entrada: {c}\nValor del Ticket: ${tot}')
+    else: 
+        res= c * v
+        print(f'Valor de la entrada: ${v}\nCantidad de entrada: {c}\nValor del Ticket: ${res}')
+
+print("Cinemark".center(40,"*"))
+canti = int(input(f'Cuantas entradas vas a comprar: '))
+valor = int(input(f'Cual es el valor de esa entrada $: '))
+datoPeli()
+print("*".center(40,"*"))
+costo(canti,valor)
+print("*".center(40,"*"))
+
+#Terminal: 
+'''
+****************Cinemark****************
+Cuantas entradas vas a comprar: 7
+Cual es el valor de esa entrada $: 2000
+Ingrese la pélicula que desea ver:  la isla
+Ingrese el día:  23/2/24
+Ingrese hora:  13hs
+*****************TICKET*****************
+Pelicula: la isla
+Día: 23/2/24 hora: 13hs
+Sala: 3
+****************************************
+Valor de la entrada: $2000
+Cantidad de entrada: 7
+Valor del Ticket: $11200.0
+****************************************
+'''
