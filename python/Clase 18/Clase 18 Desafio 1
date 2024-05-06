@@ -1,0 +1,23 @@
+#Desafío 1: Área de un triángulo
+#Desarrollar una función que reciba la longitud de la base y la altura de un
+#triángulo, y muestre en la pantalla estos dos valores junto al área de la figura.
+#Tip: el área de cualquier triángulo se calcula multiplicando la longitud de la
+#base por la altura, y dividiendo el resultado entre dos.
+
+def sacarArea (b,a):
+    area=(b * a)/ 2
+
+    print(f'La base es: {b} y la altura es: {a} por ende su area es: {area}')
+#programa principal: 
+num1 = float(input("Ingrese el número base:  "))
+num2 = float(input("Ingrese el numero altura:  "))
+print(f'el area de un triangulo'.upper().center(90,"*"))
+sacarArea(num1,num2)
+print(f'*'.center(90,"*"))
+
+#Terminal: 
+'''
+*********************************EL AREA DE UN TRIANGULO**********************************
+La base es: 30.0 y la altura es: 15.0 por ende su area es: 225.0
+******************************************************************************************
+'''
