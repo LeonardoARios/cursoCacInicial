@@ -1,0 +1,62 @@
+#Desafío 2: Tabla de multiplicar
+#Desarrollar una función que reciba un número entero de 0 a 10, y que muestre
+#por la terminal la tabla de multiplicar por ese número.
+#Algunas ideas que puedes implementar:
+
+#Verificar que el valor recibido está en el rango correcto.
+#Poner un título antes de comenzar a mostrar la tabla solicitada.
+
+def multiplicar(num):
+    num = (num)
+    if num <= 10 and num > 0:
+        res = num * 1 
+        print(f'El numero elegido {num} x 1 es igual {res}')
+        res = num * 2 
+        print(f'El numero elegido {num} x 2 es igual {res}')
+        res = num * 3 
+        print(f'El numero elegido {num} x 3 es igual {res}')
+        res = num * 4 
+        print(f'El numero elegido {num} x 4 es igual {res}')
+        res = num * 5 
+        print(f'El numero elegido {num} x 5 es igual {res}')
+        res = num * 6 
+        print(f'El numero elegido {num} x 6 es igual {res}')
+        res = num * 7 
+        print(f'El numero elegido {num} x 7 es igual {res}')
+        res = num * 8 
+        print(f'El numero elegido {num} x 8 es igual {res}')
+        res = num * 9 
+        print(f'El numero elegido {num} x 9 es igual {res}')
+        res = num * 10 
+        print(f'El numero elegido {num} x 10 es igual {res}')
+    else:
+        print("El número está fuera de rango")
+print(f'  Bienvenido, que tabla del 1 al 10 vas a multiplicar?  '.upper().center(90,"x"))
+print()
+number = input(" Ingrese el número a multiplicar:  ")
+print(f' Ok vamos hacer la tabla del {number}'.upper())
+print()
+num = int(number)
+multiplicar(num),
+print(f' Hastla luego '.upper().center(90,"x"))
+
+#Terminal: 
+
+'''
+xxxxxxxxxxxxxxxxx  BIENVENIDO, QUE TABLA DEL 1 AL 10 VAS A MULTIPLICAR?  xxxxxxxxxxxxxxxxx
+
+ Ingrese el número a multiplicar:  5
+ OK VAMOS HACER LA TABLA DEL 5
+
+El numero elegido 5 x 1 es igual 5
+El numero elegido 5 x 2 es igual 10
+El numero elegido 5 x 3 es igual 15
+El numero elegido 5 x 4 es igual 20
+El numero elegido 5 x 5 es igual 25
+El numero elegido 5 x 6 es igual 30
+El numero elegido 5 x 7 es igual 35
+El numero elegido 5 x 8 es igual 40
+El numero elegido 5 x 9 es igual 45
+El numero elegido 5 x 10 es igual 50
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx HASTLA LUEGO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+'''
