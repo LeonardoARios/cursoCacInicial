@@ -1,0 +1,19 @@
+#Desafío 4: Volumen de un cilindro
+#Crea una función que calcule el volumen de un cilindro.
+#La función debe recibir dos argumentos: el radio de la base del cilindro y su
+#altura.
+#Tip: El volumen de un cilindro se calcula con la fórmula π * radio^2 * altura.
+#Para este desafío, puedes usar el valor 3.1415926 como aproximación de π.
+
+def calcularVC(r,a):
+    return (3.1415926 * (r**2)) * a
+radio = float(input("Ingrese el valor radio del cilindro: "))
+altur = float(input("Ingrese el valor altura del cilindro: "))
+print(f'Se Calculará el Volumen del Cilindro'.center(60, "-"))
+print(f'El volumen de Cilindro es: {calcularVC(radio,altur):.2f}')
+
+#Terminal: 
+'''Ingrese el valor radio del cilindro: 50
+Ingrese el valor altura del cilindro: 40
+------------Se Calculará el Volumen del Cilindro------------
+El volumen de Cilindro es: 314159.26'''
