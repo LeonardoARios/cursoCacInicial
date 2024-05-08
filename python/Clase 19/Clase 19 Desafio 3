@@ -1,0 +1,29 @@
+#Desafío 3: Conversor de temperaturas
+#Escribe una función que convierta temperaturas de Celsius a Fahrenheit y
+#viceversa.
+#La función debe recibir dos argumentos: el valor de la temperatura y la
+#unidad de origen ('C' para Celsius, 'F' para Fahrenheit).
+#Debe retornar la temperatura convertida a la unidad opuesta.
+#Tip: para convertir Celsius a Fahrenheit la fórmula es (Celsius * 9/5) + 32, y para
+#convertir Fahrenheit a Celsius es (Fahrenheit - 32) * 5/9
+
+def convertirTemp(valor,uniOri,uniDes):
+    if uniOri.lower() == "c" and uniDes.lower() == "f":
+        return (valor * 9/5) + 32
+    elif uniOri.lower() == "f" and uniDes.lower() == "c":
+        return (valor - 32) * 5/9
+    else:
+        print("Error: la unidad a convertir es Celsius a Fahrenheit")
+        return None
+valorOr = float(input("Ingrese la temperatura que desea convertir: "))
+unidOri = input("Ingrese la unidad base en f(Farhenheit) o c(Celsius): ")
+unidDes = input("Ingrese la unidad destino en f(Farhenheit)  o c(Celsius): ")
+print(f'La unidad convertida es: {convertirTemp(valorOr,unidOri,unidDes):.2f}')
+
+#Terminal: 
+'''
+Ingrese la temperatura que desea convertir: 20
+Ingrese la unidad base en f(Farhenheit) o c(Celsius): f
+Ingrese la unidad destino en f(Farhenheit)  o c(Celsius): c
+La unidad convertida es: -6.67 
+'''
