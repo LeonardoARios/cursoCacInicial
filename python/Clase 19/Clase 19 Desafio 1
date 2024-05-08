@@ -1,0 +1,20 @@
+#Desafío 1: Conversor de distancias
+#Escribe una función en Python que convierta kilómetros a millas.
+#La función debe recibir como argumento el número de kilómetros y retornar
+#el equivalente en millas.
+#Tip: Recuerda que una milla es igual a 1.60934 kilómetros.
+
+#Comienzo de la función
+def convertirUnid(num):
+    return num * 0.621
+#Programa Principal
+print(f'Convertidor de Kilometros a Millas'.center(90,"-").upper())
+kilo = float(input("Ingrese el kilometros  a convertir: "))
+print(f'El valor convertido a millas es: {convertirUnid(kilo)}mil')
+
+#Terminal: 
+'''
+----------------------------CONVERTIDOR DE KILOMETROS A MILLAS----------------------------
+Ingrese el kilometros  a convertir: 1
+El valor convertido a millas es: 0.621mil
+'''
