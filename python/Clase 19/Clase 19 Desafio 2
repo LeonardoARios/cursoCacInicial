@@ -1,0 +1,44 @@
+#Desafío 2: Índice de Masa Corporal (IMC)
+#Crea una función que calcule el Índice de Masa Corporal (IMC) de una
+#persona.
+#La función debe recibir dos argumentos: peso (en kilogramos) y altura (en
+#metros), y retornar el IMC calculado.
+#Tip: El IMC se calcula dividiendo el peso en kilogramos por el cuadrado de la
+#altura en metros.
+
+def calcularMasa(kilo,altu):
+    return kilo/(altu**2)
+nombre = input("Ingrese su nombre: ")
+apelli = input("Ingrese su apellido: ")
+edad = input("Ingrese su edad:  ")
+date = input("Ingrese su fecha de nacimiento:  ")
+peso = float(input("Ingrese su peso en kilogramos:  "))
+medi = float(input("Ingrese su altura en metros:  "))
+
+#Formato Cartilla
+print(f'Cartilla Medica'.upper().center(90,"-"))
+print(f'nombre: {nombre} {apelli}\t\tedad: {edad}'.upper())
+print(f'fecha de nacimiento: {date}'.upper())
+print(f'Su Indice de masa corporal proporcional'.capitalize().center(90,"-"))
+print(f'IMC: {calcularMasa(peso,medi):.2f}kilos/m2')
+print(f'Contacto personal con la clinica'.upper().center(90,"-"))
+print(f'Tel: 1171345682')
+print(f'su mail: {nombre[0:7]}{edad}{apelli[0:7]}@clinicamayo.com'.lower())
+
+#Terminal: 
+'''
+Ingrese su nombre: Patricio
+Ingrese su apellido: River
+Ingrese su edad:  61
+Ingrese su fecha de nacimiento:  16/5/82
+Ingrese su peso en kilogramos:  60
+Ingrese su altura en metros:  1.80
+-------------------------------------CARTILLA MEDICA--------------------------------------
+NOMBRE: PATRICIO RIVER          EDAD: 61
+FECHA DE NACIMIENTO: 16/5/82
+-------------------------Su indice de masa corporal proporcional--------------------------
+IMC: 18.52kilos/m2
+-----------------------------CONTACTO PERSONAL CON LA CLINICA-----------------------------
+Tel: 1171345682
+su mail: patrici61river@clinicamayo.com
+'''
