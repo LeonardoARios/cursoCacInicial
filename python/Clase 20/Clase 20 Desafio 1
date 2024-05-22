@@ -1,0 +1,21 @@
+#Desafío 1: Verificador de Año Bisiesto
+#Crea un programa que pida al usuario un número entero que representa a
+#un año, y que use una función para determinar si ese año es bisiesto o no.
+#La función debe retornar un valor booleano indicando si el año es bisiesto.
+#Recuerda: Un año es bisiesto si es divisible por 4, excepto aquellos años que
+#son divisibles por 100, a menos que también sean divisibles por 400.
+
+def sacarBisiesto(a):
+    '''
+    Función que calcula si un año es bisiesto
+    '''
+    if a%4 == 0: 
+        print(f'Es un año Bisiesto')
+    elif a/100:
+        print(f'No es un año bisiesto')
+    else:
+        print(f'No es un año Bisiesto')
+
+ano = int(input(f'Ingrese un año para saber si es bisiesto:  '))
+if ano > 0: 
+    sacarBisiesto(ano)
