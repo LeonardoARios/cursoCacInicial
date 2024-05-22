@@ -1,0 +1,69 @@
+#Desafío 3: El profesor de geometría
+#Escribe un programa que tenga un menú que permita elegir si se desea:
+#1 - Hallar el área de un cuadrado
+#2 - Hallar el área de un rectángulo
+#3 - Hallar el área de un triángulo
+#4 - Hallar el área de un círculo
+#Cada opción debe hacer uso de una función propia, que pida los datos
+#necesarios y regrese el valor buscado. El programa principal debe ser el que
+#imprima el resultado.
+
+import os
+os.system('cls')
+
+def sacarAreaCuadrado(a):
+    '''
+    Esta función saca el valor de un area de un cuadrado. 
+    '''
+    area = a**2
+    return area
+
+def sacarAreaRectangulo(a,b):
+    '''
+    Esta función saca el valor de un area de un rectangulo. 
+    '''
+    area = a * b
+    return area
+
+def sacarAreaTriangulo(a,b):
+    '''
+    Esta función saca el valor del un area de un triangulo. 
+    '''
+    area = (a * b) / 2
+    return area
+
+def sacarAreaCirculo(a):
+    '''
+    Esta función saca el valor de un area de un circulo. 
+    '''
+    area = 3.14 * a ** 2
+    return area
+
+#programa pincipal: 
+print(f'bienvenido al programa Areas '.center(90,"-").upper())
+print('''Que area desea sacar?
+      1 Para sacar el area de un cuadrado
+      2 Para sacar el area de un rectangulo
+      3 Para sacar el area de un triangulo
+      4 Para sacar el area de un circulo'''.capitalize())
+selec = int(input(f'selecione una opción: '.capitalize()))
+print
+match selec:
+    case 1:
+        print(f'selecionó area de un cuadrado'.capitalize())
+        lado = float(input(f'indique el valor de los lados:  '.capitalize()))
+        print(f'{sacarAreaCuadrado(lado)}')
+    case 2: 
+        print(f'selecionó area de un rectangulo'.capitalize())
+        lado = float(input(f'indique el valor de lado mayor:  ').capitalize())
+        base = float(input(f'indique el valor del lado menor:  '.capitalize()))
+        print(f'{sacarAreaRectangulo(lado,base)}')
+    case 3:
+        print(f'selecionó area de un triangulo'.capitalize())
+        base = float(input(f'indique el valor de la base:  '.capitalize()))
+        altura = float(input(f'indque el valor de la altura:  '))
+        print(f'{sacarAreaTriangulo(base,altura)}')
+    case 4:
+        print(f'selecionó area de un circulo'.capitalize())
+        radio = float(input(f'indique el valor del radio:  '.capitalize()))
+        print(f'{sacarAreaCirculo(radio)}')
