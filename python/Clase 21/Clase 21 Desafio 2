@@ -1,0 +1,43 @@
+#Escribir un programa que permita obtener la tabla de multiplicar de un valor
+#ingresado por el usuario. Una salida posible es:
+
+def multiplicar():
+    '''
+    Esta función utiliza bucle para mostrar el número que ingresa el usuario y 
+    muestra en forma de lista la tabla de multiplicar el mimso. 
+    '''
+    a = int(input("Igresse un número para multiplicar: "))
+    b = int(0)
+    print(f'eligió la tabla del {a}'.upper().center(90,"-"))
+    while b <= 10: #recordar que siempre tiene que ser True
+        result = a * b
+        print(f'{a} x {b} = {result}')
+        #modifico contador: 
+        b = b + 1
+
+def tablaMultiplicar():
+    '''
+    Esta función muestra todas las tablas de multiplicar del 1 al 10
+    '''
+    a = 0
+    while a < 10:
+        a = a + 1
+        b = 0
+        print(f'la tabla del {a}'.upper().center(90,"-"))
+        while b <= 10: 
+            result = a * b
+            print(f'{a} x {b} = {result}')
+            #modifico contador: 
+            b = b + 1
+#Programa principal: 
+
+print(f'bienvenido al multiplicador'.upper().center(90,"-"))
+resp = input(f'Quiere mostrar todas las tablas o de un numero en especial? (si o no):  '.upper().lower())
+if resp == "si":
+    print(f'eligió mostrar todas las tablas de multiplicar'.upper())
+    tablaMultiplicar()
+elif resp == "no":
+    print(f'eligió mostrar una tabla en especial'.upper())
+    multiplicar()
+else:
+    print(f'eligió un caracter no valido responda si o no')
