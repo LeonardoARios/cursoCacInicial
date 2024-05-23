@@ -1,0 +1,30 @@
+#Desafío 1: Calculadora de Factorial
+#Desarrolla una función que calcule el factorial de un número dado.
+#El factorial de un número n se define como el producto de todos los números
+#enteros positivos desde 1 hasta n.
+#Por ejemplo, el factorial de 5 (5!) es 5 x 4 x 3 x 2 x 1 = 120.
+#La función debe recibir un número entero y devolver su factorial.
+
+def CalcuarFactorial(a):
+    #Ingresa el número que el usuario desea factorizar y definimos las variables 
+    num = a 
+    b = num #La variable b va ser la que se valla a cambiar el las iteraciones. 
+    c = b
+    #Defino el contador de mi while en 1.
+    cont = 0
+    factorial = 1 #Iniciamos la factorial en 1 y va ser nuestro acumulador del producto.
+
+    #Iniciamos nuestro bucle.
+    while cont < num:
+        factorial *= b #va a multiplicar y va a guardar el valor.
+        b = b - 1 #el b va restar por cada iteración. 
+        print(f'{c}x',end=" ") #el c va ser la variable de muestreo en pantalla 
+        c = c - 1 #la c baja de valor para mostrar en pantalla por cada print. 
+        cont = cont + 1 #la cont es la variable de control de iteración. 
+        #Inicio un condicional para mostrar el total al final de la iteración: 
+        if cont == num: 
+            print(f'= {factorial}')
+#Programa principal: 
+num = int(input(f'Ingrese el número para factorizar:  '))
+print(end=" ")
+CalcuarFactorial(num)
