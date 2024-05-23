@@ -1,0 +1,25 @@
+#Desafío 4: Generador de secuencia Fibonacci
+#Implementa una función que genere una lista conteniendo los primeros n
+#números de la secuencia Fibonacci.
+#En la secuencia Fibonacci, cada número es la suma de los dos anteriores,
+#siendo los dos primeros números 0 y 1. La función debe recibir un número
+#entero n y retornar una lista con la secuencia.
+
+import os 
+os.system("cls")
+
+def generadorFibonacci(n):
+    ant = 0
+    act = 1
+    print(ant,end=",")
+    print(act,end=",")
+    c=2 #entra con valor 2 porque ya los print anteriores contaros dos interaciónes antes de igresar al while.
+    while c < n:
+        sig = ant+act #el siguiente número de la progresión es la suma de los anteriores 
+        print(sig,end=",")
+        ant = act #el actual se transfoma en el anterior
+        act = sig #el siguiente se transforma en el actual y (sig) es el siguiente de la progresión 
+        c += 1 
+    return
+num=int(input("ingrese un numero: "))
+generadorFibonacci(num)
