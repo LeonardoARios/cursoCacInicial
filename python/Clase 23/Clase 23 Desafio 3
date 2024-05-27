@@ -1,0 +1,24 @@
+#Desafío 3: Múltiplos de un número
+#Escribir un programa que muestre todos los múltiplos de un número dado
+#dentro de un rango definido por otro número. El programa debe solicitar al
+#usuario ingresar dos números enteros: el número base del cual se calcularán
+#los múltiplos y el límite superior del rango. Luego imprimirá todos los
+#múltiplos del número base que estén dentro del rango especificado,
+#incluyendo el límite superior.
+
+def multiplicarNum():
+    '''
+    Esta función muestra en terminal los multiplos de un número que ingresa el usuario como base
+    hasata el limite que ingresó.
+    '''
+    base = int(input(f'Ingrese un número base: '))
+    limit = int(input(f'Ingrese el número superior: '))
+    print(f'Los multiplos de {base} del rango de 1 al {limit} son:')
+    for num in range(1,limit):
+        mult = base * num
+        if mult <= limit:
+            print(f' {mult}', end="")
+        if mult == limit: 
+            print(f'\n')
+        
+multiplicarNum()
