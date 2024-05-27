@@ -1,0 +1,33 @@
+#Desafío 2: Secuencia numérica
+#Desarrolla un programa que permita crear una secuencia numérica. El usuario
+#ingresará tres valores: inicio, fin y salto. Utilizar While para validar lo siguiente:
+#● El valor de inicio debe ser un número positivo.
+#● El valor de fin debe ser mayor que el de inicio.
+#● El valor de salto no puede ser cero o negativo.
+
+def secuenciarNum(a,b,c):
+    while a <= b: 
+        print(a, end=" ")
+        a = a + c
+numA = 0
+numB = 0
+numC = 0
+        
+while numA <= 0:
+    numA = int(input(f'Ingrese el número INICIAL de la secuencia:  '))
+    if numA == 0 or numA < 0:
+        print(f'El número tiene que ser positivo y distinto de 0')
+#Si la condicion del while llega a ser negativo sale del bucle, se cumpliría con input del usuario. 
+while numB <= numA:
+    numB = int(input(f'Ingrese el valor FINAL de la secuencia: '))
+    if numB <= numA:
+        print(f'El número FINAL debe ser mayor que el número INICIAL')
+#Si la condición del while llega a ser negativo sale del blucle, se cumpliría con el input del usuario. 
+while numC < 1:
+    numC = int(input(f'Ingrese la el número de la secuencia: '))
+#Confirmo la modificación de los datos ingresados por el usuario: 
+print(f'INICIAL {numA}')
+print(f'FIAL {numB}')
+print(f'SECUANCIA {numC}')
+#Llamo a la función
+secuenciarNum(numA,numB,numC)
