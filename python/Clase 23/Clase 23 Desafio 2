@@ -1,0 +1,13 @@
+#Desafío 2: Tabla de multiplicar
+#Escribir un programa que permita obtener la tabla de multiplicar de un valor
+#ingresado por el usuario.
+
+def multiplarNum():
+    '''
+    La función recibe un número para mostrarlo en terminal como tabla de multiplicar. 
+    '''
+    num = int(input(f'Ingrese un número a multiplicar: '))
+    print(f'Se mostrará la tabla de: {num} ')
+    for mult in range(11):
+        print(f'{num} x {mult} = {num * mult}' )
+multiplarNum()
