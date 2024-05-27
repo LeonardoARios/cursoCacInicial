@@ -1,0 +1,45 @@
+#Desarrolla un programa que permita ingresar números positivos hasta que se
+#ingrese 0. Al finalizar se deberá mostrar:
+#● La suma de los números pares.
+#● El promedio de los números impares.
+#● La cantidad de números ingresados.
+#● El número par más alto.
+#● El número impar más bajo.
+
+def sumarN():
+    num = 1
+    pares = 0
+    impar = 0
+    suma = 0
+    cont = 0
+    cant = 0
+    numMa = 0 
+    numMe = 0
+
+    while num != 0:
+        num = int(input(f'Ingrese número, cuando ingrese "0" detiene el programa: '))
+        cant += 1 #cantidad de números ingresados
+        
+        if num %2 == 0: #es un número par.
+            pares = num
+            suma += pares
+            #print(f'La suma de números pares es: {suma}')
+            if num > numMa:
+                numMa = num
+            
+        if num %2 != 0: #es un número impar. 
+            cont += 1
+            impar += num
+            promed = impar/cont
+            #print(f'El promedio de números impar es: {promed}')
+            if num < numMe:
+                numMe = num
+        if num == 0:
+            print(f'La suma de numeros pares es: {suma}')
+            print(f'El promedio de números impares es: {promed}')
+            print(f'La cantidad de números ingresados es: {cant}')
+            print(f'El número mayor par es: {numMa}')
+            print(f'El número menor impar es: {numMe}')
+            break
+            
+sumarN()
