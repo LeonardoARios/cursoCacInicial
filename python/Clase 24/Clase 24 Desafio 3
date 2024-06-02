@@ -1,0 +1,74 @@
+#Desafío 3: Sumador de números pares e impares
+#Desarrolla un programa que permita ingresar 15 números positivos. Al finalizar
+#se deberá mostrar:
+
+#La suma de los números pares.
+#El promedio de los números impares.
+#El número par más alto.
+#El número impar más bajo
+def ingresarNum():
+    '''
+    Función que crea una lista de 15 números positivos ingresados por el usuario. 
+    Parametros: 
+    Ninguno.
+    Retorno: 
+    Una Lista de 15 elementos. 
+    Autor: Leonardo Ríos
+    colaboradores: 
+    '''
+    list = []
+    cont = 0
+    cont2 = 2
+    nu = int(input("Ingresa 15 números positivos: "))
+    while cont < 14:
+        if nu <= 0: 
+            print("El número tiene que ser positivo")
+            nu = int(input("Ingrese otro número: "))
+        else:
+            list.append(nu)
+            #print(f'Ingrese el {cont2}°numero:')
+            nu = int(input(f'Ingrese el {cont2}° numero: '))
+            cont += 1
+        cont2 += 1
+    return list
+
+def sacarMayorYMenor(list):
+    '''
+    Función da resultados de Mayor número Par, Menor número impar, suma de números Pares y
+    promedio de números impares.
+    Parametros:
+    Lista de números naturales. 
+    Retorno: 
+    Lista de números paras. 
+    Promedio de números impares.
+    
+    '''
+    sum1 = []
+    contaIm = 0
+    sumIm = 0
+    prome = 0
+    miniImpar = 0
+    mayorPar = 0
+    for valor in list:
+        if valor %2 == 0:
+            pares = valor
+            sum1.append(pares)
+        if valor > mayorPar:
+            mayorPar = valor
+        else: 
+            contaIm += 1
+            sumIm += valor
+            prome = sumIm/contaIm
+        if valor != 0 and valor <= miniImpar:
+            miniImpar = valor
+    return sum1, prome, mayorPar, miniImpar
+#Programa Principal
+listaNumeros = ingresarNum()
+sum1, prome, mayorPar, miniImpar = sacarMayorYMenor(listaNumeros)
+#Sumo la lista de sum:
+sumo = sum(sum1)
+mayor = max(sum1)
+print("La suma de numeros Pares es: ",sumo)
+print("El promedio de Impares es: ", prome)
+print("EL numero mayor de los Pares es: ", mayor)
+print("El numero menor de los Impares es: ", miniImpar) #Como hago el menor número impar
