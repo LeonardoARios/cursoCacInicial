@@ -1,0 +1,195 @@
+#Desafío 1: Patrones visuales
+#Desarrolla un programa que permita mostrar los siguientes patrones. Luego
+#crear una función para cada uno utilizando For y un menú que permita
+#seleccionar cuál imprimir.
+
+'''
+Menú de selección de Patrones 
+Autor: Rios Leonardo
+Fecha: 2024
+Versión: 1.0
+'''
+import os
+import colorama
+
+def limpiarPantalla():
+    '''
+    función de limpiar pantalla
+    limpia la consola
+    Parametros:
+    no espera
+    Retono: 
+    no tiene
+    Autor: Leoanrdo Rios
+    '''
+    if os.name == "nt":
+        os.system("cls")
+    else: 
+        os.system("clear")
+    return
+
+def seleccionarMenu():
+    '''
+    funcion menú
+    presente un menú para el usuario para seleccionar diferentes patrones
+    Parametros: 
+    no espera
+    Retorno:
+    retornará la seleccion que hace al usuario en forma de patrones de seleccion
+    Autor: Leonardo Rios
+    colaboradores: 
+    '''
+    print(colorama.Fore.GREEN + "Seleccione un Patron a Mostrar".center(50))
+    print("=" * 50)
+    print(colorama.Fore.CYAN + "1. Triangulo: "+colorama.Fore.RESET+"muetra un patrón Triangulo")
+    print(colorama.Fore.CYAN + "2. Rectangulo: "+ colorama.Fore.RESET+"muestra un patrón Rectangulo")
+    print(colorama.Fore.CYAN + "3. Rombo: "+colorama.Fore.RESET+"muestra un patrón Rombo")
+    print(colorama.Fore.CYAN + "4. Flecha: "+colorama.Fore.RESET+"muestra un patrón Flecha")
+   
+    print(colorama.Fore.GREEN + "-"* 50 + colorama.Fore.RESET)
+    op  = input("Ingrese un número para mostrar patrón: ")
+    limpiarPantalla()
+    return op
+
+def listarPedido():
+    '''
+    función que agrega una figura ingresada por el usuario 
+    parametros: 
+    figuras
+    retorna: 
+    en forma de lista la figura ingresada
+    Autor: Leonardo Rios
+    colaboradores: 
+    '''
+    figuras = []
+    figura = input("Ingrese la figura: ")
+    while figura == "":
+        print("El valor no puede estar vacio")
+        figura = input("Ingrese la figura: ")
+    if figura in figuras:
+        print("La figura ya está solicitada")
+        return
+    figuras.append(figura)
+    return figuras
+
+def mostrarTriangulo():
+    '''
+    función que muestra como retorno un patron en forma de triangulo con el caractarer "*"
+    '''
+    espa = 7
+    for i in range (1,15,2):
+        print(" " * espa +  "*" * i)
+        espa -= 1
+    return
+
+def mostrarRectangulo():
+    '''
+    función que muestra como retorno un patron e forma de rectangulo con el caracter "*"
+    '''
+    for i in range(5):
+        print("* " * 8)
+    return
+
+def mostrarRombo():
+    '''
+    función que muestra como retorno un patron en forma de rombo con el caracter "*"
+    '''
+    espa = 7 
+    for i in range (1,12,2):
+        print(" " * espa  + "*" * i)
+        espa -= 1
+        if i == 11:
+            espa = 3
+            aste = 9
+            for i in range (1,10,2):
+                print(" " * espa + "*" * aste )
+                espa += 1
+                aste -= 2
+    return
+                
+def mostrarFlecha ():
+    '''
+    función que muestra como retorno un patrón en forma de flecha con el caracter "*".
+    '''
+    espa = 7
+    for i in range (1,8):
+        print(" " * i + "*"*7)
+        if i == 7: 
+            espa = 7
+            for i in range (1,7):
+                print(" "* espa + "*" * 7)
+                espa = espa - 1
+    return
+
+#Programa principal: 
+op = seleccionarMenu()
+while op != 5:
+    match op: 
+        case "1": 
+            print(colorama.Fore.CYAN + "Seleccionó Triangulo")
+            print()
+            mostrarTriangulo()
+            print(colorama.Fore.RESET)
+            respo = str(input("Desea solicitar una figura nueva para mostar?: ".lower()))
+            while respo == "": 
+                print("Tiene que poner S/N como respuesta.")
+                respo = str(input("Desea solicitar una figura nueva para mostar?: "))
+            if respo == "s": 
+                op = seleccionarMenu()
+            elif respo == "n":
+                op = 5
+                print("Ok, Hasta luego")
+            else:
+                print("valor no valido")
+        case "2": 
+            print(colorama.Fore.CYAN + "Selecionó Rectangulo")
+            print()
+            mostrarRectangulo()
+            print(colorama.Fore.RESET)
+            respo = str(input("Desea solicitar una figura nueva para mostar S/N?: ".lower()))
+            while respo == "": 
+                print("Tiene que poner S/N como respuesta.")
+                respo = str(input("Desea solicitar una figura nueva para mostar?: ".lower()))
+            if respo == "s": 
+                op = seleccionarMenu()
+            elif respo == "n":
+                op = 5
+                print("Ok, Hasta luego")
+            else:
+                print("valor no valido")
+        case "3": 
+            print(colorama.Fore.CYAN + "Selecionó Rectangulo")
+            print()
+            mostrarRombo()
+            print(colorama.Fore.RESET)
+            respo = str(input("Desea solicitar una figura nueva para mostar s/n?: ".lower()))
+            while respo == "": 
+                print("Tiene que poner S/N como respuesta.")
+                respo = str(input("Desea solicitar una figura nueva para mostar?: ".lower()))
+            if respo == "s": 
+                op = seleccionarMenu()
+            elif respo == "n":
+                op = 5
+                print("Ok, Hasta luego")
+            else:
+                print("valor no valido")
+        case "4":
+            print(colorama.Fore.CYAN +"Selecionó Flecha")
+            print()
+            mostrarFlecha()
+            print(colorama.Fore.RESET)
+            respo = str(input("Desea solicitar una figura nueva para mostar s/n?: ".lower()))
+            while respo == "": 
+                print("Tiene que poner S/N como respuesta.")
+                respo = str(input("Desea solicitar una figura nueva para mostar?: ".lower()))
+            if respo == "s": 
+                op = seleccionarMenu()
+            elif respo == "n":
+                op = 5
+                print("Ok, Hasta luego")
+            else:
+                print("valor no valido")
+        case _:
+            print(colorama.Fore.RED)
+            print("Ingreso no valido")
+            print(colorama.Fore.RESET)
