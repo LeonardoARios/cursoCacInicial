@@ -1,0 +1,121 @@
+#Desafío 2: Secuencia numérica
+#Desarrolla un programa que permita crear una secuencia numérica. El usuario
+#ingresará tres valores: inicio, fin y salto. Antes de iniciar el bucle, validar lo
+#siguiente:
+#El valor de inicio debe ser un número positivo.
+#El valor de fin debe ser mayor que el de inicio.
+#El valor de salto no puede ser cero o negativo.
+#Asumimos que el operador sólo ingresa números enteros.
+
+import os
+import colorama
+
+def limpiarTerminal():
+    '''
+    Función que limpiar la terminal cuando se la llama
+    puede ser usada dentro de una función o fuera de ella en el programa 
+    principal. 
+    Parametros: 
+    no recibe parametros
+    Retorna: 
+    no retorna ningún valor.
+    Autor: Leonardo Rios
+    colaboradores: 
+    '''
+    if os.name == "nt": #Para windows
+        os.system("cls") 
+    else:               #Para Linux
+        os.system("clear")
+
+def ingresarValores():
+    '''
+    Función pedirá al usuario tres valores iniciales, 
+    uno de inicio positivo, otro que sería el fin de la secuencia y
+    el tercero es que indica el salto. 
+    Parametros: 
+    No recibe parametros
+    Retorna: 
+    Tres valores que se indicarán como secuencia de numeros
+    enteros numINI, numFinal, numSal
+    Autor: Leonardo Ríos
+    colaboradores:
+    '''
+    numA = int(input(colorama.Fore.GREEN + "Ingrese el valor inicial de la secuencia: "))
+    numB = int(input(colorama.Fore.GREEN + "Ingrese el valor final de la secuencia: "))
+    numC = int(input(colorama.Fore.GREEN + "Ingrese el valor del salto de la secuencia: "))
+    print(colorama.Fore.RESET)
+    limpiarTerminal() #llamo a la función para poder limpiar mi terminal. 
+    
+    #Defino mis variables y reasigno para el bucle for.
+
+    #Variable Inicial 
+    while numA < 0: #Validación en False.
+        print(colorama.Fore.RED + "El valor INICIAL tiene que ser positivo".upper())
+        print(colorama.Fore.RESET)
+        numA = int(input(colorama.Fore.GREEN + "Ingrese nuevamente el valor INICIAL: "))
+        print(colorama.Fore.RESET)
+    else:
+        numIni = numA
+        
+
+    #Variable Final
+    while numB == numA and numB <= numA:#Validación en False. 
+        print(colorama.Fore.RED + "El valor tiene que ser mayor que el inicial y positivo".capitalize())
+        print(colorama.Fore.RESET)
+        numB = int(input(colorama.Fore.GREEN + "Ingrese el valor final de la secuencia: "))
+        print(colorama.Fore.RESET)
+    else: 
+        numFin = numB
+
+    #Variable salto:     
+    while numC <= 0: #Validación en False
+        print(colorama.Fore.RED + "El valor tiene que ser distinto de 0 y positivo".upper())
+        print(colorama.Fore.RESET)
+        numC = int(input(colorama.Fore.GREEN + "Ingrese el valor del salto de la secuencia: "))
+        print(colorama.Fore.RESET)
+    else: 
+        numSal = numC
+    return numIni,numFin,numSal
+
+def secuenciarNums(a,b,c):
+    '''
+    Función que procesa los números internos y crea una lista 
+    resultante utilizando el bucle "for in"
+    Parametros: 
+    Si, deben venír del programa principal 
+    deben ser ordenados.
+    Retorna: 
+    Si, en bucle resultante da como retorno
+    una list secuencial para mostrar en terminal.
+    '''
+    secuencia=[]
+    #Acomodos las variables definidas en range, que controlarán mi secuencia de números. 
+    for value in range(a,b+1,c):
+        secuencia.append(value)
+    return secuencia
+
+
+#Programa principal: 
+print(colorama.Fore.CYAN)#dentro de éste print lo que muestre en el terminal sera del color Cyan
+print("="*50)#dibujo una linea de color cyan para demilitar el inicio del menú. 
+#Creo un imput para ingresar un dato string que sea la respuesta a la pregunta y el inicio de las funciones. 
+respo = str(input(f'Quiere hacer una secuencia de números? S/N: '.capitalize()))
+print("="*50)
+print(colorama.Fore.RESET)
+#Elijo mi validación 
+match respo.lower(): 
+    case "s":
+        secuenciaI, secuenciaF, SecuenciaS = ingresarValores()
+        secuencia = secuenciarNums(secuenciaI,secuenciaF,SecuenciaS)
+        #Muestro resultados: 
+        print(colorama.Fore.GREEN)
+        print("="*80)
+        print("La secuencia es: ", end="")
+        for numero in secuencia:
+            print(numero, end=" ")
+        print()
+        print("="*80)
+        print(colorama.Fore.RESET)
+        print("\n")
+    case _:
+        print("Hasta Luego! Suerte!")
