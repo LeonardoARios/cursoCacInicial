@@ -1,0 +1,90 @@
+#Desafío 1: Creación de un Ticket de Compra
+#Desarrollar un programa que permita al usuario generar un ticket de compra
+#ingresando productos y sus respectivos precios en dos listas distintas. El ingreso
+#de datos se realiza mediante un bucle while, donde el usuario tiene la opción de
+#agregar más productos o finalizar la entrada de datos. Una vez que se
+#completan las entradas y se sale del bucle, el programa muestra el ticket de
+#compra, que incluye el nombre y el precio de cada producto, así como el total a
+#pagar. Para asegurar una presentación ordenada, cada producto se alinea a la
+#izquierda y su precio a la derecha en el ticket, utilizando los métodos ljust() y
+#rjust(). El total a pagar también se alinea a la derecha para mantener la
+#onsistencia visual con los precios de los productos.
+
+'''
+Programa que muestra como resultado un ticket de compra en 
+donde se mostrará del lado izquierdo el producto y en la derecha 
+se mostrará el precio del mismo. 
+Autor: Leonardo A Ríos
+Año: 2024
+Versión: 1.0
+'''
+import os
+import colorama
+def limiarTerminal():
+    '''
+    Función que limpiar la teminal
+    Parametros: 
+    Ninguno
+    Retorno:
+    Ninguno
+    Autor: Leonardo Ríos
+    colaboradores: 
+    '''
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+        
+#Programa Principal: 
+productos =[]
+precios =[]
+respo = "si"
+contPro = 0
+sum = 0
+while respo == "si":
+    print(colorama.Fore.CYAN)
+    limiarTerminal()
+    print("="*50)
+    #Creo mi variable input de producto.
+    prod = str(input("Ingrese el producto:  " + colorama.Fore.RESET))
+    #Inprimo el producto que ingreso. 
+    print(colorama.Fore.CYAN)
+    print("El producto ingresado es: ", prod.capitalize())
+    #Agrego a la lista el producto ingresado. 
+    productos.append(prod)
+    #Creo mi variable input de valor. 
+    prec = float(input("Ingrese el precio del mismo:  "+colorama.Fore.RESET))
+    #Imprimo el precio del producto. 
+    print("El precio ingresado es: ", prec)
+    #Agrego a la lista el precio ingresado. 
+    precios.append(prec)
+    #Conteo de productos.
+    contPro += 1
+    #Sumatoria de precios. 
+    sum += prec
+    #Sacar longitudes de las listas para usar en el resultados del ticket
+    #no afectaría si el producto o el precio cambián de longitudes en el resultados. 
+    len1 = len(productos)
+    len2 = len(precios)
+    print("="*50)
+    limiarTerminal()
+    print(colorama.Fore.YELLOW)
+    #Condicional para el While, cambia el valor de la variable respo. 
+    respo = str(input("Quiere cargar otro producto?si/no:  "+ colorama.Fore.RESET))
+    if respo.lower() == "si":
+        print("Ok ingresse el siguiente producto.")
+    else:
+        print()
+print(colorama.Fore.RESET)
+
+#Ticket del Desafio: 
+print(colorama.Fore.LIGHTYELLOW_EX)
+print("Ticket de Compra:")
+print("-"*25)
+#Combinación de dos listas con zip. 
+c = zip(productos,precios)
+dibu = ":$"
+for pro1,prec2 in zip(productos,precios):
+    print(f'{pro1.ljust(len1 + 10)} {str(prec2).rjust(len2 + 10)}')
+print("-"*25)
+print("Total a Pagar".rjust(20),sum)
