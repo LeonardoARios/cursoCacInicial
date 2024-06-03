@@ -1,0 +1,114 @@
+#Desafío 1: Programa de Gestión de Listas de Números
+#Instrucciones:
+#1. Al iniciar el programa, se mostrará un menú con las opciones disponibles.
+#2. Selecciona la opción deseada ingresando el número correspondiente.
+#3. Si eliges la opción para agregar valores, podrás ingresar múltiples números
+#uno por uno. Para finalizar la carga, ingresa el número 0.
+#4. Después de agregar valores, puedes seleccionar otras opciones del menú
+#para realizar operaciones con la lista.
+#5. Repite las operaciones según sea necesario.
+#6. Cuando desees salir del programa, elige la opción correspondiente en el
+#menú.
+
+import os
+import colorama
+
+def limpiarPantalla():
+    if os.name == "nt":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+def menuInicio():
+
+    print(colorama.Fore.CYAN)
+    print("="*70)
+    print("1.\t Agregar valores")
+    print("2.\t Sumar valores")
+    print("3.\t Calcular promedio")
+    print("4.\t Mostrar lista")
+    print("5.\t Salir")
+    print("="*70)
+    print(colorama.Fore.RESET)
+    select= int(input("Seleccione una opción: "))
+    limpiarPantalla()
+    return select
+
+def ingresarNum():
+    numeros = []
+    bande = True
+    num = 0
+    while bande == True: 
+        num = int(input("Ingrese los número:  "))
+        numeros.append(num)
+        respo = input("Quiere agregar otro número?")
+        respo = respo[0]
+        if respo == "n".lower():
+            bande = False
+    return numeros
+
+def sumarNum(lisNum):
+    sumaDeNum = sum(lisNum)
+    return sumaDeNum
+
+def promNum(lisNum):
+    sumaDeNum = sum(lisNum)
+    promedio = sumaDeNum/len(lisNum)
+    return promedio
+
+def muestrNum(lisNum):
+    print("La lista es: ", end="")
+    for numero in lisNum:
+        print(numero, end=" ")
+    return
+
+#PROGRAMA PRINCIPAL
+listaNumeros = 0
+respo = menuInicio() #Muestra el menú de inicio. 
+while respo !=6:
+    match respo: 
+        case 1:
+            print("Seleccionó: ", respo)
+            print()
+            listaNumeros = ingresarNum()
+            print()
+            input("Presione enter para continuar...")
+            limpiarPantalla()
+        case 2:
+            print("Seleccionó: ", respo)
+            print()
+            sumaNumeros = sumarNum(listaNumeros)
+            print("La suma de la lista es: ",sumaNumeros)
+            print()
+            input("Presione enter para continar...")
+            limpiarPantalla()
+        case 3: 
+            print("Seleccionó: ",respo)
+            print()
+            promeNumeros = promNum(listaNumeros)
+            print("El promedio de la lista es: ", promeNumeros)
+            print()
+            input("Presione enter para continuar")
+            limpiarPantalla()
+        case 4:
+            print("Seleccionó: ", respo)
+            print()
+            mostrLista = muestrNum(listaNumeros)
+            print("\n")
+            print()
+            input("Presione enter para continuar")
+            limpiarPantalla()
+        case 5:
+            print("Seleccionó: ", respo)
+            print()
+            input("Presione enter para Salir ")
+            limpiarPantalla()
+            break
+        case _:
+            print()
+            print("Opción incorrecta")
+            print()
+            input("Presione enter para continuar")
+            limpiarPantalla()
+    respo = menuInicio()
+print("Gracias por utilizar el programa")
